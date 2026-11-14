@@ -1,0 +1,82 @@
+// Curated skill catalogue used by the analyser.
+// Each entry: display name + lowercase aliases matched in text.
+// Keep this list honest and general — it is a keyword catalogue, not a
+// claim about any ATS vendor's database.
+const SKILLS = [
+  { name: "JavaScript", aliases: ["javascript", "js"] },
+  { name: "TypeScript", aliases: ["typescript", "ts"] },
+  { name: "React", aliases: ["react", "react.js", "reactjs"] },
+  { name: "Next.js", aliases: ["next.js", "nextjs"] },
+  { name: "Node.js", aliases: ["node.js", "nodejs", "node"] },
+  { name: "Express", aliases: ["express", "express.js"] },
+  { name: "HTML", aliases: ["html", "html5"] },
+  { name: "CSS", aliases: ["css", "css3"] },
+  { name: "Tailwind CSS", aliases: ["tailwind", "tailwind css"] },
+  { name: "Python", aliases: ["python"] },
+  { name: "Java", aliases: ["java"] },
+  { name: "C++", aliases: ["c++"] },
+  { name: "C", aliases: [" c ", "c programming"] },
+  { name: "SQL", aliases: ["sql"] },
+  { name: "PostgreSQL", aliases: ["postgresql", "postgres"] },
+  { name: "MySQL", aliases: ["mysql"] },
+  { name: "MongoDB", aliases: ["mongodb", "mongo"] },
+  { name: "Firebase", aliases: ["firebase"] },
+  { name: "Supabase", aliases: ["supabase"] },
+  { name: "REST API", aliases: ["rest api", "restful", "rest apis"] },
+  { name: "GraphQL", aliases: ["graphql"] },
+  { name: "Git", aliases: ["git"] },
+  { name: "GitHub", aliases: ["github"] },
+  { name: "Docker", aliases: ["docker"] },
+  { name: "Kubernetes", aliases: ["kubernetes"] },
+  { name: "AWS", aliases: ["aws", "amazon web services"] },
+  { name: "Azure", aliases: ["azure"] },
+  { name: "Google Cloud", aliases: ["google cloud", "gcp"] },
+  { name: "Vercel", aliases: ["vercel"] },
+  { name: "Figma", aliases: ["figma"] },
+  { name: "Redux", aliases: ["redux"] },
+  { name: "Vue.js", aliases: ["vue", "vue.js"] },
+  { name: "Angular", aliases: ["angular"] },
+  { name: "Flutter", aliases: ["flutter"] },
+  { name: "React Native", aliases: ["react native"] },
+  { name: "Machine Learning", aliases: ["machine learning", "ml"] },
+  { name: "Deep Learning", aliases: ["deep learning"] },
+  { name: "NLP", aliases: ["nlp", "natural language processing"] },
+  { name: "Computer Vision", aliases: ["computer vision"] },
+  { name: "TensorFlow", aliases: ["tensorflow"] },
+  { name: "PyTorch", aliases: ["pytorch"] },
+  { name: "Scikit-learn", aliases: ["scikit-learn", "sklearn"] },
+  { name: "Pandas", aliases: ["pandas"] },
+  { name: "NumPy", aliases: ["numpy"] },
+  { name: "Excel", aliases: ["excel", "microsoft excel"] },
+  { name: "Power BI", aliases: ["power bi"] },
+  { name: "Tableau", aliases: ["tableau"] },
+  { name: "Data Analysis", aliases: ["data analysis", "data analytics"] },
+  { name: "Data Visualisation", aliases: ["data visualisation", "data visualization"] },
+  { name: "Statistics", aliases: ["statistics", "statistical analysis"] },
+  { name: "A/B Testing", aliases: ["a/b testing", "ab testing"] },
+  { name: "Agile", aliases: ["agile", "scrum"] },
+  { name: "CI/CD", aliases: ["ci/cd", "continuous integration"] },
+  { name: "Testing", aliases: ["unit testing", "jest", "vitest", "testing"] },
+  { name: "Linux", aliases: ["linux"] },
+  { name: "Shell Scripting", aliases: ["bash", "shell scripting"] },
+  { name: "UI/UX Design", aliases: ["ui/ux", "ux design", "ui design"] },
+  { name: "Responsive Design", aliases: ["responsive design"] },
+  { name: "Accessibility", aliases: ["accessibility", "a11y", "wcag"] },
+  { name: "Performance Optimisation", aliases: ["performance optimisation", "performance optimization"] },
+  { name: "SEO", aliases: ["seo"] },
+  { name: "Communication", aliases: ["communication"] },
+  { name: "Teamwork", aliases: ["teamwork", "collaboration"] },
+  { name: "Problem Solving", aliases: ["problem solving", "problem-solving"] },
+  { name: "Leadership", aliases: ["leadership"] },
+  { name: "Project Management", aliases: ["project management"] },
+];
+
+const STOP_WORDS = new Set(
+  ("a an the and or but if then else when at by for with about against between into through during before after above below to from up down in out on off over under again further once here there all any both each few more most other some such no nor not only own same so than too very can will just should now is am are was were be been being have has had having do does did doing would shall could ought i you he she it we they them his her its our their this that these those what which who whom how why where when as of in to for on with by at from as and or not the a an").split(" ")
+);
+
+const ACTION_VERBS = [
+  "achieved","built","created","delivered","designed","developed","drove","engineered","improved","increased","launched","led","managed","optimised","optimized","reduced","shipped","automated","implemented","mentored","owned","scaled","streamlined","grew","saved","won","coordinated","analysed","analyzed","deployed","migrated","refactored","tested","collaborated",
+];
+
+module.exports = { SKILLS, STOP_WORDS, ACTION_VERBS };

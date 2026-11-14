@@ -1,0 +1,165 @@
+/* ResumeLens AI — Apple Light System (~/workspace/user/files/apple.com-design.md)
+   Tokens: primary #0071e3, secondary #2997ff, tertiary #0066cc,
+   neutral #f5f5f7, surface #ffffff, on-surface #1d1d1f,
+   error #d92d20, border #e5e7eb.
+   No gradients, no heavy shadows, no decorative noise. */
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: #ffffff;
+  color: #1d1d1f;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.47;
+  -webkit-font-smoothing: antialiased;
+}
+
+.page { min-height: 100vh; }
+
+.nav {
+  border-bottom: 1px solid #e5e7eb;
+  background: #ffffff;
+}
+.nav-inner {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.logo { font-size: 17px; font-weight: 600; }
+.nav-note { font-size: 12px; line-height: 1.33; color: #6e6e73; }
+
+main { max-width: 1024px; margin: 0 auto; padding: 0 24px; }
+
+.hero { text-align: center; padding: 70px 0 54px; }
+.hero h1 {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", sans-serif;
+  font-size: 47px;
+  font-weight: 600;
+  line-height: 60px;
+  letter-spacing: -0.28px;
+  margin: 0 0 24px;
+}
+.hero-sub { font-size: 28px; line-height: 42px; letter-spacing: 0.196px; color: #1d1d1f; margin: 0 auto 16px; max-width: 720px; }
+.hero-note { font-size: 14px; line-height: 1.43; color: #6e6e73; margin: 0; }
+
+.section-label { font-size: 13px; line-height: 1.38; color: #6e6e73; margin: 0 0 16px; text-align: center; }
+.samples { padding-bottom: 24px; }
+.sample-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.sample-btn.active { background: #0071e3; color: #ffffff; }
+.sample-caption { text-align: center; font-size: 14px; color: #6e6e73; margin: 16px 0 0; }
+
+.btn {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  font-size: 17px;
+  line-height: 1.47;
+  border-radius: 9999px;
+  padding: 11px 21px;
+  height: 44px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  background: transparent;
+}
+.btn:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn-primary { background: #0071e3; color: #ffffff; }
+.btn-primary:hover { background: #0066cc; }
+.btn-secondary { background: transparent; color: #2997ff; border-color: #e5e7eb; }
+.btn-secondary:hover { border-color: #2997ff; }
+.btn-tertiary { background: transparent; color: #0066cc; padding: 11px 8px; }
+
+.inputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 24px 0;
+}
+.input-card label { display: block; font-size: 17px; font-weight: 600; margin-bottom: 8px; }
+textarea {
+  width: 100%;
+  background: #ffffff;
+  color: #1d1d1f;
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+  font-size: 17px;
+  line-height: 1.47;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 11px 16px;
+  resize: vertical;
+}
+textarea:focus { outline: 2px solid #0071e3; outline-offset: 1px; border-color: #0071e3; }
+.count { font-size: 13px; color: #6e6e73; margin: 8px 0 0; }
+
+.actions { text-align: center; padding: 24px 0 54px; }
+.hint { font-size: 14px; color: #6e6e73; margin: 16px 0 0; }
+.error { color: #d92d20; text-align: center; }
+
+.card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  padding: 16px;
+}
+.card h2, .card h3 { margin: 0 0 8px; }
+.card p { margin: 0 0 8px; }
+.muted { color: #6e6e73; font-size: 14px; line-height: 1.43; }
+
+.results { padding: 24px 0 54px; }
+.score-card { display: flex; gap: 24px; align-items: center; padding: 24px; }
+.score-card h2 { font-size: 33px; line-height: 40px; font-weight: 600; }
+.gauge { position: relative; flex-shrink: 0; }
+.gauge-text { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.gauge-number { font-size: 40px; font-weight: 600; line-height: 44px; }
+.gauge-outof { font-size: 14px; color: #6e6e73; }
+
+.section-title { font-size: 33px; line-height: 40px; font-weight: 600; margin: 54px 0 24px; }
+.grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.grid.two { margin-top: 24px; }
+.grid.three { grid-template-columns: repeat(3, 1fr); }
+.breakdown-head { display: flex; justify-content: space-between; margin-bottom: 8px; }
+.bar { height: 8px; background: #f5f5f7; border-radius: 9999px; overflow: hidden; margin-bottom: 8px; }
+.bar-fill { height: 100%; background: #0071e3; border-radius: 9999px; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.chip {
+  background: #f5f5f7;
+  color: #1d1d1f;
+  font-size: 13px;
+  line-height: 1.38;
+  border-radius: 9999px;
+  padding: 6px 12px;
+}
+.chip-good { background: #f5f5f7; }
+.chip-missing { background: #ffffff; border: 1px solid #d92d20; color: #d92d20; }
+
+.section-row {
+  display: flex; gap: 16px; align-items: center;
+  padding: 8px 0; border-bottom: 1px solid #e5e7eb;
+}
+.section-row:last-child { border-bottom: none; }
+.section-row .muted { margin-left: auto; }
+.dot { width: 24px; height: 24px; border-radius: 9999px; display: inline-flex; align-items: center; justify-content: center; font-size: 13px; flex-shrink: 0; }
+.dot-yes { background: #f5f5f7; color: #0071e3; }
+.dot-no { background: #ffffff; border: 1px solid #e5e7eb; color: #6e6e73; }
+
+.suggestions { display: grid; gap: 16px; }
+.suggestion p { margin-top: 8px; }
+.method { font-size: 14px; color: #6e6e73; margin-top: 24px; }
+
+.how { padding-bottom: 70px; background: #f5f5f7; margin: 0 -24px; padding: 54px 24px 70px; }
+.how .section-title { margin-top: 0; }
+
+footer { border-top: 1px solid #e5e7eb; padding: 24px; text-align: center; }
+footer p { font-size: 14px; color: #6e6e73; margin: 0; }
+
+@media (max-width: 720px) {
+  .hero h1 { font-size: 40px; line-height: 44px; }
+  .hero-sub { font-size: 17px; line-height: 1.47; }
+  .inputs, .grid, .grid.three { grid-template-columns: 1fr; }
+  .score-card { flex-direction: column; text-align: center; }
+  .nav-note { display: none; }
+}
